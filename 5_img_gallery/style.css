@@ -1,0 +1,62 @@
+/* ---------- Base Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- Grid Section ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.grid img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* ---------- Slideshow Section ---------- */
+.slideshow {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.slideshow img {
+  max-width: 80%;
+  max-height: 70%;
+}
+.controls {
+  margin-top: 15px;
+}
+.controls button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ---------- Media Query ---------- */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <h1>Photo Gallery</h1>
+  <div class="grid">
+    <img src="img1.png" alt="Photo 1" onclick="openSlideshow(0)">
+    <img src="img2.png" alt="Photo 2" onclick="openSlideshow(1)">
+    <img src="img1.png" alt="Photo 3" onclick="openSlideshow(2)">
+    <img src="img2.png" alt="Photo 4" onclick="openSlideshow(3)">
+    <img src="img1.png" alt="Photo 5" onclick="openSlideshow(4)">
+    <img src="img2.png" alt="Photo 6" onclick="openSlideshow(5)">
+  </div>
+
+  <div class="slideshow" id="slideshow">
+    <img id="slideImg" src="" alt="Slideshow Image">
+    <div class="controls">
+      <button onclick="prevImage()">Prev</button>
+      <button id="playBtn" onclick="toggleAutoPlay()">Play</button>
+      <button onclick="nextImage()">Next</button>
+      <button onclick="closeSlideshow()">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
